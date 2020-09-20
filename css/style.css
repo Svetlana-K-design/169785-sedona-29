@@ -1,0 +1,165 @@
+/*fonts*/
+
+/*variables*/
+:root {
+  --basic-color: #FFFFFF;
+  --font-color-bold: #000000;
+  --font-color-thin: #333333;
+  --accent-color: #81B3D2;
+  --background-advantages: #EEEEEE;
+  --button-booking-active: #604E43;
+  --button-booking: #503E33;
+  --fields-form: #F2F2F2;
+  --background-footer: rgba(255, 255, 255, 0.9);
+  --background-page: rgba(0, 1, 1, 0.2);
+  --link-active: #766357;
+}
+/*Global*/
+body {
+  min-width: 960px;
+  margin: 0;
+  padding: 0;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: normal;
+  color: var(--font-color-thin);
+  text-transform: uppercase;
+  background-color: var(--basic-color);
+}
+
+a {
+  text-decoration: none;
+  color: var(--font-color-bold);
+  font-weight: bold;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Main navigation */
+.main-navigation {
+  line-height: 26px;
+}
+
+.site-navigation {
+  list-style: none;
+}
+
+/* User navigation */
+.site-navigation a:hover {
+  color: var(--accent-color)
+}
+
+.site-navigation a:active {
+  color: var(--font-color-bold);
+  opacity: 0.3;
+}
+
+.nav-item-hotels {
+  color: var(--link-active);
+}
+
+/*Advantages*/
+.welcome {
+  background-image: url("file:///Users/lana/Documents/GitHub/169785-sedona-29/img/background_photo.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.advantages-list,
+.advaces-list {
+  list-style: none;
+}
+
+.slogan,
+.advantages p,
+.advantage-item {
+  text-align: center;
+}
+
+.slogan {
+  font-size: 21px;
+  line-height: 26px;
+}
+
+.advantage-item h3,
+.advace-item h4 {
+  font-size: 21px;
+  line-height: 21px;
+}
+
+.advantage p {
+  font-size: 14px;
+  line-height: 26px;
+}
+
+.first-advantage,
+.second-advantage {
+  color: var(--basic-color);
+  background-color: var(--accent-color);
+}
+
+.three-advantages {
+  background-color: var(--background-advantages)
+}
+
+/*Search-hotels*/
+.search-hotels {
+  text-align: center;
+}
+
+.search-hotels h2 {
+  font-size: 30px;
+  line-height: 24px;
+}
+
+.search-hotels p {
+  line-height: 24px;
+}
+
+/*Button*/
+.button {
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--basic-color);
+  vertical-align: middle;
+  border: none;
+}
+
+.button-booking {
+  background-color: var(--link-active);
+  font-size: 21px;
+  line-height: 26px;
+}
+
+.button-booking:active {
+  background-color: var(--button-booking-active);
+}
+/*.search-open-form {
+  background-color: var(--button-booking);
+  color: var(--basic-color);
+  opacity: 0.3;
+}*/
+/*Search-form*/
+
+/* Main footer */
+.main-footer {
+  background-color: var(--background-footer);
+  color: var(--font-color-bold);
+}
+
+.footer-contacts {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+}
+
+.footer-social ul {
+  list-style: none;
+}
+
+.main-footer p {
+  line-height: 26px;
+}
