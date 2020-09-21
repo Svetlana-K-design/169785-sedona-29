@@ -71,7 +71,7 @@ img {
 
 /*Advantages*/
 .welcome {
-  background-image: url("file:///Users/lana/Documents/GitHub/169785-sedona-29/img/background_photo.jpg");
+  background-image: url("../img/background_photo.jpg");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -215,7 +215,7 @@ img {
 }
 /*Filters*/
 .filters {
-  background-image: url("file:///Users/lana/Documents/GitHub/169785-sedona-29/img/background_inner_page.png");
+  background-image: url("../img/background_inner_page.png");
   background-repeat: no-repeat;
   background-position: center;
 }
