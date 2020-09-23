@@ -12,7 +12,7 @@
   --button-booking-hover: #604E43;
   --button-booking: #503E33;
   --button-booking-opacity: rgba(255, 255, 255, 0.3);
-  --fields-form: #F2F2F2;
+  --fields-form-ligt-gray: #F2F2F2;
   --background-footer: rgba(255, 255, 255, 0.9);
   --background-page: rgba(0, 1, 1, 0.2);
   --link-active-brown: #766357;
@@ -30,13 +30,21 @@ body {
   font-weight: 400;
   color: var(--font-color-thin);
   text-transform: uppercase;
-  background-color: var(--basic-color);
+  background-color: var(--fields-form-ligt-gray);
 }
 
 a {
   text-decoration: none;
   color: var(--font-color-bold);
   font-weight: 700;
+}
+
+.page-center {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+  background-color: var(--basic-color);
+  box-shadow: 0 5px 15px 0 var(--background-page);
 }
 
 img {
@@ -47,10 +55,14 @@ img {
 /* Main navigation */
 .main-navigation {
   line-height: 26px;
+  margin: 0;
+  padding: 0;
 }
 
 .site-navigation {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 /* User navigation */
@@ -78,6 +90,8 @@ img {
 .advantages-list,
 .advaces-list {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .slogan,
@@ -117,6 +131,8 @@ img {
 /*Search-hotels*/
 .search-hotels {
   text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
 .search-hotels h2 {
@@ -225,6 +241,8 @@ img {
 .sort-scale,
 .hotels-list {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .sort-options p {
