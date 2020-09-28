@@ -339,14 +339,81 @@ img {
 /*Main footer*/
 .main-footer {
   background-color: var(--background-footer);
-  outline: 5px solid rgba(0, 255, 0, 0.7);
-  outline-offset: -5px;
 }
 /*Filters*/
 .filters {
   background-image: url("../img/background_inner_page.png");
   background-repeat: no-repeat;
   background-position: center;
+  height: 217px;
+}
+
+.filters h1 {
+  display: none;
+}
+
+.filters-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+legend {
+  color: var(--basic-color);
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 700;
+}
+
+label {
+  color: var(--basic-color);
+}
+
+fieldset {
+  border: none;
+  margin-right: 118px;
+  padding: 0;
+  margin-top: 40px;
+}
+
+/*Grid*/
+.filter {
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+
+  height: 217px;
+  margin: 0 70px;
+}
+
+
+fieldset:nth-child(3) {
+  grid-column: 3;
+  justify-self: end;
+  align-self: baseline;
+  margin-right: 0;
+}
+
+.filter .filter-button {
+  grid-column: 3;
+  justify-self: end;
+  align-self: center;
+}
+/*Button*/
+.filter-button {
+  background: none;
+  border: var(--basic-color) 2px solid;
+  padding: 5px 30px;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  margin-bottom: 45px
+}
+
+.filter-button:hover {
+  background: var(--basic-color);
+  color: var(--font-color-bold)
 }
 
 /*Search results*/
@@ -416,4 +483,83 @@ img {
 
 .rating {
   background-color: var(--fields-form-ligt-gray);
+}
+
+/*Grid*/
+.search-results {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  margin: 0 70px;
+}
+
+.sort-options {
+  display: grid;
+  grid-template-columns: 135px 1fr;
+  grid-column-gap: 30px;
+  align-self: center;
+}
+
+.sort-options-filter {
+  display: grid;
+  grid-template-columns: min-content auto 1fr;
+  align-self: center;
+}
+
+.sort-list {
+  margin-left: 40px;
+}
+
+.sort-scale {
+  justify-self: end;
+}
+
+.hotel-item {
+  display: grid;
+  grid-template-columns: 135px auto auto 1fr;
+  grid-template-rows: repeat(3, min-content);
+  grid-column-gap: 10px;
+
+  padding: 30px 0;
+}
+
+.hotel-item img {
+  grid-row: 1/4;
+  justify-self: start;
+  align-self: center;
+}
+
+.hotel-name {
+  grid-column: 2/4;
+  grid-row: 1;
+  align-self: center;
+}
+
+.stars {
+  grid-row: 1;
+  grid-column: 4;
+  justify-self: end;
+  align-self: center;
+}
+
+.rating {
+  grid-row: 3;
+  grid-column: 4;
+  justify-self: end;
+}
+
+.hotel-item .button-search {
+  grid-row: 3;
+  grid-column: 2;
+  align-self: center;
+}
+
+.hotel-item .button-booking {
+  grid-row: 3;
+  grid-column: 3;
+  align-self: center;
+}
+
+.hotel-name h3 {
+  margin: 0;
+  padding: 0;
 }

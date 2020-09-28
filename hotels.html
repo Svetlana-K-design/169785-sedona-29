@@ -25,38 +25,81 @@
       <main class="center page-hotels">
         <section class="filters">
           <h1 class="visually-hidden">Выбор отеля</h1>
-          <!-- Здесь будет форма фильтра -->
+          <form class="filter" method="get" action="#">
+            <fieldset>
+              <legend>Инфраструктура:</legend>
+              <ul class="filters-list">
+                <li class="filter-item">
+                  <input type="checkbox" name="poll" id="filter-pool" checked>
+                  <label for="filter-pool">Бассейн</label>
+                </li>
+                <li class="filter-item">
+                  <input type="checkbox" name="parking" id="filter-parking">
+                  <label for="filter-parking">Парковка</label>
+                </li>
+                <li class="filter-item">
+                  <input type="checkbox" name="wi-fi" id="filter-wi-fi">
+                  <label for="filter-wi-fi">Wi-Fi</label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset>
+              <legend>Тип жилья:</legend>
+              <ul class="filters-list">
+                <li class="filter-item">
+                  <input type="checkbox" name="hotel" id="filter-hotel" checked>
+                  <label for="filter-pool">Гостиница</label>
+                </li>
+                <li class="filter-item">
+                  <input type="checkbox" name="motel" id="filter-motel" checked>
+                  <label for="filter-parking">Мотель</label>
+                </li>
+                <li class="filter-item">
+                  <input type="checkbox" name="apartments" id="filter-apartments" checked>
+                  <label for="filter-wi-apartments">Апартаменты</label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset>
+              <legend>Стоимость в сутки (Р):</legend>
+              <label for="filter-price"><span>от 0</span> <span>до 3000</span></label>
+              <input type="range" min="0" max="3000" name="price" id="filter-price">
+            </fieldset>
+            <button type="submit" class="button filter-button">Показать</button>
+        </form>
         </section>
         <section class="search-results">
           <div class="sort-options">
-            <h2 class="visually-hidden">Результаты поиска</h2>
-            <p>Найдено: 3</p>
-          <div>
-            <h3>Сортировка:</h3>
-            <ul class="sort-list">
-              <li class="sort-item"><a href="#">По цене</a></li>
-              <li class="sort-item"><a href="#">По типу</a></li>
-              <li class="sort-item"><a href="#">По рейтингу</a></li>
-            </ul>
-            <ul class="sort-scale">
-              <li class="scale-item"><a href="#">от меньшего к большему
-                <svg width="11" height="10">
-                  <polygon points="0,10 5.5,0 11,10" class="scale-polygon"/>
-                </svg>
-              </a></li>
-              <li class="scale-item"><a href="#">от большего к меньшему
-                <svg width="11" height="10">
-                  <polygon points="0,0 5.5,10 11,0"  class="scale-polygon"/>
-                </svg>
-              </a></li>
-            </ul>
-          </div>
+            <div class="sort-options-text">
+              <h2 class="visually-hidden">Результаты поиска</h2>
+              <p>Найдено: 3</p>
+            </div>
+            <div class="sort-options-filter">
+              <h3>Сортировка:</h3>
+              <ul class="sort-list">
+                  <li class="sort-item"><a href="#">По цене</a></li>
+                  <li class="sort-item"><a href="#">По типу</a></li>
+                  <li class="sort-item"><a href="#">По рейтингу</a></li>
+              </ul>
+              <ul class="sort-scale">
+                  <li class="scale-item"><a href="#">от меньшего к большему
+                    <svg width="11" height="10">
+                      <polygon points="0,10 5.5,0 11,10" class="scale-polygon"/>
+                    </svg>
+                  </a></li>
+                  <li class="scale-item"><a href="#">от большего к меньшему
+                    <svg width="11" height="10">
+                      <polygon points="0,0 5.5,10 11,0"  class="scale-polygon"/>
+                    </svg>
+                  </a></li>
+                </ul>
+            </div>
           </div>
           <ul class="hotels-list">
             <li class="hotel-item">
-              <a href="blank.html"><h3>Amara Resort & Spa</h3></a>
+              <a href="blank.html" class="hotel-name"><h3>Amara Resort & Spa</h3></a>
               <img src="img/Layer21.jpg" width="135" height="90" alt="Amara Resort & Spa">
-              <p>Гостиница</p>
+              <p class="hotel-status">Гостиница</p>
               <p>От 4000 Р.</p>
               <a href="blank.html" class="button button-search">Подробнее</a>
               <a href="blank.html" class="button button-booking">Забронировать</a>
@@ -70,9 +113,9 @@
               <p class="rating">Рейтинг: 8,5</p>
             </li>
             <li class="hotel-item">
-              <a href="blank.html"><h3>Desert Quail Inn</h3></a>
+              <a href="blank.html" class="hotel-name"><h3>Desert Quail Inn</h3></a>
               <img src="img/Layer89.jpg" width="135" height="90" alt="Desert Quail Inn">
-              <p>Мотель</p>
+              <p class="hotel-status">Мотель</p>
               <p>От 3000 Р.</p>
               <a href="blank.html" class="button button-search">Подробнее</a>
               <a href="blank.html" class="button button-booking">Забронировать</a>
@@ -84,9 +127,9 @@
               <p class="rating">Рейтинг: 8,9</p>
             </li>
             <li class="hotel-item">
-              <a href="blank.html"><h3>Villas at Poco Diablo</h3></a>
+              <a href="blank.html" class="hotel-name"><h3>Villas at Poco Diablo</h3></a>
               <img src="img/Rectangle.jpg" width="135" height="90" alt="Villas at Poco Diablo">
-              <p>Апартаменты</p>
+              <p class="hotel-status">Апартаменты</p>
               <p>От 2000 Р.</p>
               <a href="blank.html" class="button button-search">Подробнее</a>
               <a href="blank.html" class="button button-booking">Забронировать</a>
