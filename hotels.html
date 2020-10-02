@@ -25,7 +25,7 @@
       <main class="center page-hotels">
         <section class="filters">
           <h1 class="visually-hidden">Выбор отеля</h1>
-          <form class="filter" method="get" action="#">
+          <form class="filter" method="get" action="https://echo.htmlacademy.ru">
             <fieldset>
               <legend>Инфраструктура:</legend>
               <ul class="filters-list">
@@ -60,12 +60,14 @@
                 </li>
               </ul>
             </fieldset>
-            <fieldset>
-              <legend>Стоимость в сутки (Р):</legend>
-              <label for="filter-price"><span>от 0</span> <span>до 3000</span></label>
-              <input type="range" min="0" max="3000" name="price" id="filter-price">
-            </fieldset>
-            <button type="submit" class="button filter-button">Показать</button>
+            <div class="filter-part">
+              <fieldset>
+                <legend>Стоимость в сутки (Р):</legend>
+                <label class="filter-part-label" for="filter-price"><span>от 0</span> <span>до 3000</span></label>
+                <input type="range" min="0" max="3000" name="price" id="filter-price">
+              </fieldset>
+              <button type="submit" class="button filter-button">Показать</button>
+            </div>
         </form>
         </section>
         <section class="search-results">
@@ -82,12 +84,12 @@
                   <li class="sort-item"><a href="#">По рейтингу</a></li>
               </ul>
               <ul class="sort-scale">
-                  <li class="scale-item"><a href="#">от меньшего к большему
+                  <li class="scale-item"><a href="#"><!--от меньшего к большему-->
                     <svg width="11" height="10">
                       <polygon points="0,10 5.5,0 11,10" class="scale-polygon"/>
                     </svg>
                   </a></li>
-                  <li class="scale-item"><a href="#">от большего к меньшему
+                  <li class="scale-item"><a href="#"><!--от большего к меньшему-->
                     <svg width="11" height="10">
                       <polygon points="0,0 5.5,10 11,0"  class="scale-polygon"/>
                     </svg>
@@ -97,47 +99,59 @@
           </div>
           <ul class="hotels-list">
             <li class="hotel-item">
-              <a href="blank.html" class="hotel-name"><h3>Amara Resort & Spa</h3></a>
               <img src="img/Layer21.jpg" width="135" height="90" alt="Amara Resort & Spa">
-              <p class="hotel-status">Гостиница</p>
-              <p>От 4000 Р.</p>
-              <a href="blank.html" class="button button-search">Подробнее</a>
-              <a href="blank.html" class="button button-booking">Забронировать</a>
-              <span class="stars stars-five">
-                <img src="img/star.svg" width="18" height="17" alt="5 из 5 звёзд">
-                <img src="img/star.svg" width="18" height="17" alt="">
-                <img src="img/star.svg" width="18" height="17" alt="">
-                <img src="img/star.svg" width="18" height="17" alt="">
-                <img src="star.svg" width="18" height="17" alt="">
-              </span>
-              <p class="rating">Рейтинг: 8,5</p>
+              <div class="hotel-item-description">
+                <a href="blank.html" class="hotel-name"><h3>Amara Resort & Spa</h3></a>
+                <p class="hotel-status">Гостиница</p>
+                <p>От 4000 Р.</p>
+                <a href="blank.html" class="button button-search">Подробнее</a>
+                <a href="blank.html" class="button button-booking">Забронировать</a>
+              </div>
+              <div class="hotel-item-rating">
+                <span class="stars stars-five">
+                  <img src="img/star.svg" width="18" height="17" alt="5 из 5 звёзд">
+                  <img src="img/star.svg" width="18" height="17" alt="">
+                  <img src="img/star.svg" width="18" height="17" alt="">
+                  <img src="img/star.svg" width="18" height="17" alt="">
+                  <img src="star.svg" width="18" height="17" alt="">
+                </span>
+                <p class="rating">Рейтинг: 8,5</p>
+              </div>
             </li>
             <li class="hotel-item">
-              <a href="blank.html" class="hotel-name"><h3>Desert Quail Inn</h3></a>
               <img src="img/Layer89.jpg" width="135" height="90" alt="Desert Quail Inn">
-              <p class="hotel-status">Мотель</p>
-              <p>От 3000 Р.</p>
-              <a href="blank.html" class="button button-search">Подробнее</a>
-              <a href="blank.html" class="button button-booking">Забронировать</a>
-              <span class="stars stars-three">
-                <img src="img/star.svg" width="18" height="17" alt="3 из 5 звёзд">
-                <img src="img/star.svg" width="18" height="17" alt="">
-                <img src="img/star.svg" width="18" height="17" alt="">
-              </span>
-              <p class="rating">Рейтинг: 8,9</p>
+              <div class="hotel-item-description">
+                <a href="blank.html" class="hotel-name"><h3>Desert Quail Inn</h3></a>
+                <p class="hotel-status">Мотель</p>
+                <p>От 3000 Р.</p>
+                <a href="blank.html" class="button button-search">Подробнее</a>
+                <a href="blank.html" class="button button-booking">Забронировать</a>
+              </div>
+              <div class="hotel-item-rating">
+                <span class="stars stars-three">
+                  <img src="img/star.svg" width="18" height="17" alt="3 из 5 звёзд">
+                  <img src="img/star.svg" width="18" height="17" alt="">
+                  <img src="img/star.svg" width="18" height="17" alt="">
+                </span>
+                <p class="rating">Рейтинг: 8,9</p>
+              </div>
             </li>
             <li class="hotel-item">
-              <a href="blank.html" class="hotel-name"><h3>Villas at Poco Diablo</h3></a>
               <img src="img/Rectangle.jpg" width="135" height="90" alt="Villas at Poco Diablo">
-              <p class="hotel-status">Апартаменты</p>
-              <p>От 2000 Р.</p>
-              <a href="blank.html" class="button button-search">Подробнее</a>
-              <a href="blank.html" class="button button-booking">Забронировать</a>
-              <span class="stars stars-two">
-                <img src="img/star.svg" width="18" height="17" alt="2 из 5 звёзд">
-                <img src="img/star.svg" width="18" height="17" alt="">
-              </span>
-              <p class="rating">Рейтинг: 9,2</p>
+              <div class="hotel-item-description">
+                <a href="blank.html" class="hotel-name"><h3>Villas at Poco Diablo</h3></a>
+                <p class="hotel-status">Апартаменты</p>
+                <p>От 2000 Р.</p>
+                <a href="blank.html" class="button button-search">Подробнее</a>
+                <a href="blank.html" class="button button-booking">Забронировать</a>
+              </div>
+              <div class="hotel-item-rating">
+                <span class="stars stars-two">
+                  <img src="img/star.svg" width="18" height="17" alt="2 из 5 звёзд">
+                  <img src="img/star.svg" width="18" height="17" alt="">
+                </span>
+                <p class="rating">Рейтинг: 9,2</p>
+              </div>
             </li>
           </ul>
         </section>

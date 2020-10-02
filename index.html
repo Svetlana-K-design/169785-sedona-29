@@ -89,7 +89,21 @@
             <p>  Укажите предполагаемые даты поездки,<br>  и мы покажем вам лучшие предложения гостиниц в Седоне  </p>
             <button class="button button-booking search-open-form" type="button">Поиск гостиницы в Седоне</button>
             <img src="img/map.png" width="1199" height="594" alt="карта окрестностей Седоны">
-              <!-- Здесь будет форма поиска гостиницы в Седоне -->
+            <form class="search-hotels-form" method="get" action="https://echo.htmlacademy.ru">
+              <p>
+                <label for="arival-date-field">Дата заезда:</label>
+                <input type="date" name="arival-date" id="arival-date-field" value="2017-04-24">
+              </p>
+              <p>
+                <label for="depart-date-field">Дата выезда:</label>
+                <input type="date" name="depart-date" id="depart-date-field" value="2017-07-04">
+              </p>
+              <p>
+                <label>Взрослые:<input type="number" name="adult" step="1" value="2"></label>
+                <label>Дети:<input type="number" name="child" step="1" value="0"></label>
+              </p>
+              <input class="button button-search" type="submit" value="Найти">
+            </form>
           </section>
         </main>
         <footer class="page-footer main-footer">
