@@ -30,15 +30,15 @@
               <legend>Инфраструктура:</legend>
               <ul class="filters-list">
                 <li class="filter-item">
-                  <input type="checkbox" name="poll" id="filter-pool" checked>
+                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="poll" id="filter-pool" checked>
                   <label for="filter-pool">Бассейн</label>
                 </li>
                 <li class="filter-item">
-                  <input type="checkbox" name="parking" id="filter-parking">
+                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="parking" id="filter-parking">
                   <label for="filter-parking">Парковка</label>
                 </li>
                 <li class="filter-item">
-                  <input type="checkbox" name="wi-fi" id="filter-wi-fi">
+                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="wi-fi" id="filter-wi-fi">
                   <label for="filter-wi-fi">Wi-Fi</label>
                 </li>
               </ul>
@@ -47,15 +47,15 @@
               <legend>Тип жилья:</legend>
               <ul class="filters-list">
                 <li class="filter-item">
-                  <input type="checkbox" name="hotel" id="filter-hotel" checked>
+                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="hotel" id="filter-hotel" checked>
                   <label for="filter-pool">Гостиница</label>
                 </li>
                 <li class="filter-item">
-                  <input type="checkbox" name="motel" id="filter-motel" checked>
+                  <input class="visually-hidden filter-input-checkbox filter-input"  type="checkbox" name="motel" id="filter-motel" checked>
                   <label for="filter-parking">Мотель</label>
                 </li>
                 <li class="filter-item">
-                  <input type="checkbox" name="apartments" id="filter-apartments" checked>
+                  <input class="visually-hidden filter-input-checkbox filter-input"  type="checkbox" name="apartments" id="filter-apartments" checked>
                   <label for="filter-wi-apartments">Апартаменты</label>
                 </li>
               </ul>
@@ -63,8 +63,23 @@
             <div class="filter-part">
               <fieldset>
                 <legend>Стоимость в сутки (Р):</legend>
-                <label class="filter-part-label" for="filter-price"><span>от 0</span> <span>до 3000</span></label>
-                <input type="range" min="0" max="3000" name="price" id="filter-price">
+                <div class="range-filter">
+                  <div class="price-controls">
+                    <label class="min-price">
+                      от <input type="number" name="min-price" value="0">
+                    </label>
+                    <label class="max-price">
+                      до <input type="number" name="max-price" value="3000">
+                    </label>
+                  </div>
+                  <div class="range-controls">
+                    <div class="scale">
+                      <div class="bar"></div>
+                    </div>
+                    <div class="toggle toggle-min" tabindex="0"></div>
+                    <div class="toggle toggle-max" tabindex="0"></div>
+                  </div>
+                </div>
               </fieldset>
               <button type="submit" class="button filter-button">Показать</button>
             </div>
@@ -79,17 +94,19 @@
             <div class="sort-options-filter">
               <h3>Сортировка:</h3>
               <ul class="sort-list">
-                  <li class="sort-item"><a href="#">По цене</a></li>
-                  <li class="sort-item"><a href="#">По типу</a></li>
-                  <li class="sort-item"><a href="#">По рейтингу</a></li>
+                <li class="sort-item"><a href="#">По цене</a></li>
+                <li class="sort-item"><a href="#">По типу</a></li>
+                <li class="sort-item"><a href="#">По рейтингу</a></li>
               </ul>
               <ul class="sort-scale">
-                  <li class="scale-item"><a href="#"><!--от меньшего к большему-->
+                  <li class="scale-item"><a href="#">
+                    <span class="visually-hidden">от меньшего к большему</span>
                     <svg width="11" height="10">
                       <polygon points="0,10 5.5,0 11,10" class="scale-polygon"/>
                     </svg>
                   </a></li>
-                  <li class="scale-item"><a href="#"><!--от большего к меньшему-->
+                  <li class="scale-item"><a href="#">
+                    <span class="visually-hidden">от большего к меньшему</span>
                     <svg width="11" height="10">
                       <polygon points="0,0 5.5,10 11,0"  class="scale-polygon"/>
                     </svg>
@@ -165,32 +182,37 @@
         <section class="footer-social">
           <h2 class="visually-hidden">социальные сети</h2>
           <ul>
-            <li>
-              <a class="social-link" href="#">Твиттер
-                <svg width="46" height="48">
-                  <rect width="46" height="48" class="social-button"/>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a class="social-link" href="#">Фейсбук
-                <svg width="46" height="48">
-                  <rect width="46" height="48" class="social-button"/>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a class="social-link" href="#">Ютуб
-                <svg width="46" height="48">
-                  <rect width="46" height="48" class="social-button"/>
-                </svg>
-              </a>
+           <li>
+             <a class="social-link" href="#">
+               <span class="visually-hidden">Твиттер</span>
+               <svg  width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                 <path class="social-icon" d="M10.95 1.14403C12.635 0.648028 13.934 1.41403 14.527 2.32303C15.2 2.09203 15.858 1.84203 16.538 1.61503C16.5249 2.30139 16.2117 2.94755 15.681 3.38303C16.366 3.55303 16.985 2.89203 16.985 2.89203C16.816 3.89203 15.979 4.68003 15.422 4.91603C15.191 11.666 12.247 16.133 5.34498 15.998H4.89898C4.48898 15.998 0.734977 15.538 0.000976562 14.111C2.27198 14.307 3.89398 13.689 4.69398 12.934C3.73398 12.634 2.01498 12.457 1.71498 9.98403C2.06398 10.09 2.27898 10.212 2.90498 10.103C1.70498 9.24703 0.373977 8.53003 0.447977 6.33003C0.732977 6.65803 1.51498 6.86603 1.78798 6.80203C1.08498 6.56103 -0.182023 3.44203 0.893977 1.85003C2.71198 3.70403 4.62898 5.45603 8.04598 5.62303C8.25398 3.33003 9.18298 1.79303 10.95 1.14403Z" fill="white"/>
+               </svg>
+             </a>
            </li>
+           <li>
+             <a class="social-link" href="#">
+               <span class="visually-hidden">Фейсбук</span>
+               <svg  width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                 <path class="social-icon" d="M12 4V0H8C5.79086 0 4 1.79086 4 4V8H0V12H4V22H8V12H12V8H8V4H12Z" fill="white"/>
+               </svg>
+             </a>
+           </li>
+           <li>
+             <a class="social-link" href="#">
+               <span class="visually-hidden">Ютуб</span>
+               <svg  width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                 <path class="social-icon" fill-rule="evenodd" clip-rule="evenodd" d="M3 0H17C18.65 0 20 1.35 20 3V13C20 14.65 18.65 16 17 16H3C1.35 16 0 14.65 0 13V3C0 1.35 1.35 0 3 0ZM6.027 4.002V11.998L15.014 8L6.027 4.002Z" fill="white"/>
+               </svg>
+             </a>
+          </li>
           </ul>
         </section>
-        <p>
+        <p class="footer-copyright">
           Website by
-          <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
+          <a class="footer-copyright-link" href="https://htmlacademy.ru/intensive/htmlcss">
+            <span class="visually-hidden">HTML Academy</span>
+          </a>
         </p>
       </footer>
     </div>

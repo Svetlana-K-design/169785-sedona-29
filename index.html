@@ -37,7 +37,7 @@
                  <div class="first-advantage">
                    <div class="first-advantage-text">
                      <h3>Настоящий<br>городок</h3>
-                     <p>Седона - не аттракцион для туристов, там
+                     <p class="advantage-item-text">Седона - не аттракцион для туристов, там
 течёт своя жизнь  </p>
                     </div>
                   <img src="img/image_first_advantage.jpg" width="800" height="256" alt="улицы Седоны">
@@ -60,26 +60,26 @@
             <li class="advantage-item second-advantage">
                 <div class="second-advantage-text">
                   <h3>Там есть Мост дьявола</h3>
-                  <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+                  <p class="advantage-item-text">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
                 </div>
                 <img src="img/image_second_advantage.jpg" width="800" height="256" alt="Мост дьявола">
             </li>
              <li class="advantage-item three-advantages">
                <div class="three-advantages-text">
                  <h3>Небольшая площадь</h3>
-                 <p>Все достопримечательности<br>находятся очень близко</p>
+                 <p class="advantage-item-text">Все достопримечательности<br>находятся очень близко</p>
                </div>
              </li>
              <li class="advantage-item three-advantages">
                <div class="three-advantages-text">
                  <h3>Красивая дорога</h3>
-                 <p>Ехать в седону из Лас-Вегаса совсем не скучно!</p>
+                 <p class="advantage-item-text">Ехать в седону из Лас-Вегаса совсем не скучно!</p>
                </div>
              </li>
              <li class="advantage-item three-advantages">
                <div class="three-advantages-text">
                  <h3>Мало туристов</h3>
-                 <p>Большинство едет в гранд каньон и толпится там</p>
+                 <p class="advantage-item-text">Большинство едет в гранд каньон и толпится там</p>
                </div>
              </li>
            </ol>
@@ -90,17 +90,33 @@
             <button class="button button-booking search-open-form" type="button">Поиск гостиницы в Седоне</button>
             <img src="img/map.png" width="1199" height="594" alt="карта окрестностей Седоны">
             <form class="search-hotels-form" method="get" action="https://echo.htmlacademy.ru">
-              <p>
+              <p class="shearch-dates">
                 <label for="arival-date-field">Дата заезда:</label>
-                <input type="date" name="arival-date" id="arival-date-field" value="2017-04-24">
+                <input class="arival-date" type="date" name="arival-date" id="arival-date-field" value="2017-04-24">
               </p>
-              <p>
+              <p class="shearch-dates">
                 <label for="depart-date-field">Дата выезда:</label>
-                <input type="date" name="depart-date" id="depart-date-field" value="2017-07-04">
+                <input class="depart-date" type="date" name="depart-date" id="depart-date-field" value="2017-07-04">
               </p>
-              <p>
-                <label>Взрослые:<input type="number" name="adult" step="1" value="2"></label>
-                <label>Дети:<input type="number" name="child" step="1" value="0"></label>
+              <p class="guest-number">
+                <label class="adult">Взрослые:
+                  <svg width="13" height="3" fill="#A9A9A9">
+                    <rect width="13" height="3" x="0" y="0">
+                  </svg>
+                  <input type="number" name="adult" step="1" value="2">
+                  <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="union" fill-rule="evenodd" clip-rule="evenodd" d="M4.23086 6.76932V11H6.76932V6.76932H11V4.23086H6.76932V0H4.23085V4.23086H0V6.76932H4.23086Z" fill="#A9A9A9"/>
+                  </svg>
+                </label>
+                <label class="child">Дети:
+                  <svg width="13" height="3" fill="#A9A9A9">
+                    <rect width="13" height="3" x="0" y="0">
+                  </svg>
+                  <input type="number" name="child" step="1" value="0">
+                  <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="union" fill-rule="evenodd" clip-rule="evenodd" d="M4.23086 6.76932V11H6.76932V6.76932H11V4.23086H6.76932V0H4.23085V4.23086H0V6.76932H4.23086Z" fill="#A9A9A9"/>
+                  </svg>
+                </label>
               </p>
               <input class="button button-search" type="submit" value="Найти">
             </form>
@@ -116,31 +132,36 @@
             <h2 class="visually-hidden">социальные сети</h2>
             <ul>
              <li>
-               <a class="social-link" href="#">Твиттер
-                 <svg width="46" height="48">
-                   <rect width="46" height="48" class="social-button"/>
+               <a class="social-link" href="#">
+                 <span class="visually-hidden">Твиттер</span>
+                 <svg  width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                   <path class="social-icon" d="M10.95 1.14403C12.635 0.648028 13.934 1.41403 14.527 2.32303C15.2 2.09203 15.858 1.84203 16.538 1.61503C16.5249 2.30139 16.2117 2.94755 15.681 3.38303C16.366 3.55303 16.985 2.89203 16.985 2.89203C16.816 3.89203 15.979 4.68003 15.422 4.91603C15.191 11.666 12.247 16.133 5.34498 15.998H4.89898C4.48898 15.998 0.734977 15.538 0.000976562 14.111C2.27198 14.307 3.89398 13.689 4.69398 12.934C3.73398 12.634 2.01498 12.457 1.71498 9.98403C2.06398 10.09 2.27898 10.212 2.90498 10.103C1.70498 9.24703 0.373977 8.53003 0.447977 6.33003C0.732977 6.65803 1.51498 6.86603 1.78798 6.80203C1.08498 6.56103 -0.182023 3.44203 0.893977 1.85003C2.71198 3.70403 4.62898 5.45603 8.04598 5.62303C8.25398 3.33003 9.18298 1.79303 10.95 1.14403Z" fill="white"/>
                  </svg>
                </a>
              </li>
              <li>
-               <a class="social-link" href="#">Фейсбук
-                 <svg width="46" height="48">
-                   <rect width="46" height="48" class="social-button"/>
+               <a class="social-link" href="#">
+                 <span class="visually-hidden">Фейсбук</span>
+                 <svg  width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                   <path class="social-icon" d="M12 4V0H8C5.79086 0 4 1.79086 4 4V8H0V12H4V22H8V12H12V8H8V4H12Z" fill="white"/>
                  </svg>
                </a>
              </li>
              <li>
-               <a class="social-link" href="#">Ютуб
-                 <svg width="46" height="48">
-                   <rect width="46" height="48" class="social-button"/>
+               <a class="social-link" href="#">
+                 <span class="visually-hidden">Ютуб</span>
+                 <svg  width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                   <path class="social-icon" fill-rule="evenodd" clip-rule="evenodd" d="M3 0H17C18.65 0 20 1.35 20 3V13C20 14.65 18.65 16 17 16H3C1.35 16 0 14.65 0 13V3C0 1.35 1.35 0 3 0ZM6.027 4.002V11.998L15.014 8L6.027 4.002Z" fill="white"/>
                  </svg>
                </a>
             </li>
             </ul>
           </section>
-          <p>
+          <p class="footer-copyright">
             Website by
-            <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
+            <a class="footer-copyright-link" href="https://htmlacademy.ru/intensive/htmlcss">
+              <span class="visually-hidden">HTML Academy</span>
+            </a>
           </p>
         </footer>
     </div>
