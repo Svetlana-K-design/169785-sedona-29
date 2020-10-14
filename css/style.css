@@ -305,6 +305,7 @@ img {
 .advace-item:first-child h4::before {
   content: "";
   display: block;
+  margin: 0 auto;
   width: 75px;
   height: 72px;
   background-image: url("../img/icon/icon-1.svg");
@@ -315,6 +316,7 @@ img {
 .advace-item:nth-child(2) h4::before {
   content: "";
   display: block;
+  margin: 0 auto;
   width: 75px;
   height: 70px;
   background-image: url("../img/icon/icon-3.svg");
@@ -325,6 +327,7 @@ img {
 .advace-item:last-child h4::before {
   content: "";
   display: block;
+  margin: 0 auto;
   width: 64px;
   height: 77px;
   background-image: url("../img/icon/icon-2.svg");
@@ -799,13 +802,21 @@ fieldset {
 }
 
 .price-controls input {
-  width: 60px;
-  padding: 10px 0;
   text-align: left;
   color: inherit;
   border: none;
-  border-radius: 5px;
   background: none;
+  text-align: center;
+}
+
+.min-price input {
+  width: 10px;
+  padding: 0;
+}
+
+.max-price input {
+  width: 35px;
+  padding: 0;
 }
 
 /*Flex*/
@@ -821,11 +832,19 @@ fieldset {
 
 .price-controls {
   margin-top: 10px;
-  display: grid;
-  grid-template-columns: auto auto;
+  display: flex;
   width: 317px;
-  padding: 0 auto;
+  height: 36px;
   border: var(--basic-color) 2px solid;
+  border-radius: 2px;
+}
+
+.price-controls label {
+  width: 50%;
+  text-align: center;
+  vertical-align: middle;
+  margin-top: 7px;
+  margin-bottom: 7px;
 }
 
 .min-price {
