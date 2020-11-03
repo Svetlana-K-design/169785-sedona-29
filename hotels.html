@@ -5,7 +5,7 @@
   <title>HTML Academy: Седона</title>
   <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
 </head>
 <body class="page-body inner-page">
   <div class="page-center">
@@ -99,121 +99,126 @@
               <li class="sort-item"><a href="#">По рейтингу</a></li>
             </ul>
             <ul class="sort-scale">
-              <li class="scale-item"><a href="#">
-                <span class="visually-hidden">от меньшего к большему</span>
-                <svg width="11" height="10">
-                  <polygon points="0,10 5.5,0 11,10" class="scale-polygon"/>
-                </svg>
-              </a></li>
-              <li class="scale-item"><a href="#">
-                <span class="visually-hidden">от большего к меньшему</span>
-                <svg width="11" height="10">
-                  <polygon points="0,0 5.5,10 11,0"  class="scale-polygon"/>
-                </svg>
-              </a></li>
+              <li class="scale-item">
+                <a href="#">
+                  <span class="visually-hidden">от меньшего к большему</span>
+                  <svg role="img" aria-label="Сортировать по возрастанию" width="11" height="10">
+                    <polygon points="0,10 5.5,0 11,10" class="scale-polygon"/>
+                  </svg>
+                </a>
+              </li>
+                <li class="scale-item">
+                  <a href="#">
+                    <span class="visually-hidden">от большего к меньшему</span>
+                    <svg class="scale-item-active" role="img" aria-label="Сортировать по убыванию" width="11" height="10">
+                      <polygon points="0,0 5.5,10 11,0"  class="scale-polygon"/>
+                    </svg>
+                  </a>
+                </li>
+                </ul>
+              </div>
+            </div>
+            <ul class="hotels-list">
+              <li class="hotel-item">
+                <img src="img/amara_resort.jpg" width="135" height="90" alt="Amara Resort & Spa">
+                <div class="hotel-item-description">
+                  <a href="blank.html" class="hotel-name"><h3>Amara Resort & Spa</h3></a>
+                  <p class="hotel-status">Гостиница</p>
+                  <p>От 4000 Р.</p>
+                  <a href="blank.html" class="button button-search">Подробнее</a>
+                  <a href="blank.html" class="button button-booking">Забронировать</a>
+                </div>
+                <div class="hotel-item-rating">
+                  <span class="stars stars-five">
+                    <img src="img/star.svg" width="18" height="17" alt="4 из 5 звёзд">
+                    <img src="img/star.svg" width="18" height="17" alt="">
+                    <img src="img/star.svg" width="18" height="17" alt="">
+                    <img src="img/star.svg" width="18" height="17" alt="">
+                  </span>
+                  <p class="rating">Рейтинг: 8,5</p>
+                </div>
+              </li>
+              <li class="hotel-item">
+                <img src="img/desert_quail.jpg" width="135" height="90" alt="Desert Quail Inn">
+                <div class="hotel-item-description">
+                  <a href="blank.html" class="hotel-name"><h3>Desert Quail Inn</h3></a>
+                  <p class="hotel-status">Мотель</p>
+                  <p>От 3000 Р.</p>
+                  <a href="blank.html" class="button button-search">Подробнее</a>
+                  <a href="blank.html" class="button button-booking">Забронировать</a>
+                </div>
+                <div class="hotel-item-rating">
+                  <span class="stars stars-three">
+                    <img src="img/star.svg" width="18" height="17" alt="3 из 5 звёзд">
+                    <img src="img/star.svg" width="18" height="17" alt="">
+                    <img src="img/star.svg" width="18" height="17" alt="">
+                  </span>
+                  <p class="rating">Рейтинг: 8,9</p>
+                </div>
+              </li>
+              <li class="hotel-item">
+                <img src="img/villas_at_poco.jpg" width="135" height="90" alt="Villas at Poco Diablo">
+                <div class="hotel-item-description">
+                  <a href="blank.html" class="hotel-name"><h3>Villas at Poco Diablo</h3></a>
+                  <p class="hotel-status">Апартаменты</p>
+                  <p>От 2000 Р.</p>
+                  <a href="blank.html" class="button button-search">Подробнее</a>
+                  <a href="blank.html" class="button button-booking">Забронировать</a>
+                </div>
+                <div class="hotel-item-rating">
+                  <span class="stars stars-two">
+                    <img src="img/star.svg" width="18" height="17" alt="2 из 5 звёзд">
+                    <img src="img/star.svg" width="18" height="17" alt="">
+                  </span>
+                  <p class="rating">Рейтинг: 9,2</p>
+                </div>
+              </li>
             </ul>
-          </div>
-        </div>
-        <ul class="hotels-list">
-          <li class="hotel-item">
-            <img src="img/amara_resort.jpg" width="135" height="90" alt="Amara Resort & Spa">
-            <div class="hotel-item-description">
-              <a href="blank.html" class="hotel-name"><h3>Amara Resort & Spa</h3></a>
-              <p class="hotel-status">Гостиница</p>
-              <p>От 4000 Р.</p>
-              <a href="blank.html" class="button button-search">Подробнее</a>
-              <a href="blank.html" class="button button-booking">Забронировать</a>
-            </div>
-            <div class="hotel-item-rating">
-              <span class="stars stars-five">
-                <img src="img/star.svg" width="18" height="17" alt="4 из 5 звёзд">
-                <img src="img/star.svg" width="18" height="17" alt="">
-                <img src="img/star.svg" width="18" height="17" alt="">
-                <img src="img/star.svg" width="18" height="17" alt="">
-              </span>
-              <p class="rating">Рейтинг: 8,5</p>
-            </div>
-          </li>
-          <li class="hotel-item">
-            <img src="img/desert_quail.jpg" width="135" height="90" alt="Desert Quail Inn">
-            <div class="hotel-item-description">
-              <a href="blank.html" class="hotel-name"><h3>Desert Quail Inn</h3></a>
-              <p class="hotel-status">Мотель</p>
-              <p>От 3000 Р.</p>
-              <a href="blank.html" class="button button-search">Подробнее</a>
-              <a href="blank.html" class="button button-booking">Забронировать</a>
-            </div>
-            <div class="hotel-item-rating">
-              <span class="stars stars-three">
-                <img src="img/star.svg" width="18" height="17" alt="3 из 5 звёзд">
-                <img src="img/star.svg" width="18" height="17" alt="">
-                <img src="img/star.svg" width="18" height="17" alt="">
-              </span>
-              <p class="rating">Рейтинг: 8,9</p>
-            </div>
-          </li>
-          <li class="hotel-item">
-            <img src="img/villas_at_poco.jpg" width="135" height="90" alt="Villas at Poco Diablo">
-            <div class="hotel-item-description">
-              <a href="blank.html" class="hotel-name"><h3>Villas at Poco Diablo</h3></a>
-              <p class="hotel-status">Апартаменты</p>
-              <p>От 2000 Р.</p>
-              <a href="blank.html" class="button button-search">Подробнее</a>
-              <a href="blank.html" class="button button-booking">Забронировать</a>
-            </div>
-            <div class="hotel-item-rating">
-              <span class="stars stars-two">
-                <img src="img/star.svg" width="18" height="17" alt="2 из 5 звёзд">
-                <img src="img/star.svg" width="18" height="17" alt="">
-              </span>
-              <p class="rating">Рейтинг: 9,2</p>
-            </div>
-          </li>
-        </ul>
-      </section>
-    </main>
-    <footer class="page-footer inner-footer">
-      <section class="footer-contacts">
-        <h2 class="visually-hidden">контакты</h2>
-        <p>#visitSEDONA</p>
-        <a class="footer-phone" href="tel:+74956660166">ТЕЛ: +7(495) 666-01-66</a>
-      </section>
-      <section class="footer-social">
-        <h2 class="visually-hidden">социальные сети</h2>
-        <ul>
-          <li>
-            <a class="social-link" href="#">
-              <span class="visually-hidden">Твиттер</span>
-              <svg  width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path class="social-icon" d="M10.95 1.14403C12.635 0.648028 13.934 1.41403 14.527 2.32303C15.2 2.09203 15.858 1.84203 16.538 1.61503C16.5249 2.30139 16.2117 2.94755 15.681 3.38303C16.366 3.55303 16.985 2.89203 16.985 2.89203C16.816 3.89203 15.979 4.68003 15.422 4.91603C15.191 11.666 12.247 16.133 5.34498 15.998H4.89898C4.48898 15.998 0.734977 15.538 0.000976562 14.111C2.27198 14.307 3.89398 13.689 4.69398 12.934C3.73398 12.634 2.01498 12.457 1.71498 9.98403C2.06398 10.09 2.27898 10.212 2.90498 10.103C1.70498 9.24703 0.373977 8.53003 0.447977 6.33003C0.732977 6.65803 1.51498 6.86603 1.78798 6.80203C1.08498 6.56103 -0.182023 3.44203 0.893977 1.85003C2.71198 3.70403 4.62898 5.45603 8.04598 5.62303C8.25398 3.33003 9.18298 1.79303 10.95 1.14403Z" fill="white"/>
-              </svg>
+          </section>
+        </main>
+        <footer class="page-footer inner-footer">
+          <section class="footer-contacts">
+            <h2 class="visually-hidden">контакты</h2>
+            <p>#visitSEDONA</p>
+            <a class="footer-phone" href="tel:+74956660166">ТЕЛ: +7(495) 666-01-66</a>
+          </section>
+          <section class="footer-social">
+            <h2 class="visually-hidden">социальные сети</h2>
+            <ul>
+              <li>
+                <a class="social-link" href="#">
+                  <span class="visually-hidden">Твиттер</span>
+                  <svg aria-hidden="true" focusable="false" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="social-icon" d="M10.95 1.14403C12.635 0.648028 13.934 1.41403 14.527 2.32303C15.2 2.09203 15.858 1.84203 16.538 1.61503C16.5249 2.30139 16.2117 2.94755 15.681 3.38303C16.366 3.55303 16.985 2.89203 16.985 2.89203C16.816 3.89203 15.979 4.68003 15.422 4.91603C15.191 11.666 12.247 16.133 5.34498 15.998H4.89898C4.48898 15.998 0.734977 15.538 0.000976562 14.111C2.27198 14.307 3.89398 13.689 4.69398 12.934C3.73398 12.634 2.01498 12.457 1.71498 9.98403C2.06398 10.09 2.27898 10.212 2.90498 10.103C1.70498 9.24703 0.373977 8.53003 0.447977 6.33003C0.732977 6.65803 1.51498 6.86603 1.78798 6.80203C1.08498 6.56103 -0.182023 3.44203 0.893977 1.85003C2.71198 3.70403 4.62898 5.45603 8.04598 5.62303C8.25398 3.33003 9.18298 1.79303 10.95 1.14403Z" fill="white"/>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a class="social-link" href="#">
+                  <span class="visually-hidden">Фейсбук</span>
+                  <svg aria-hidden="true" focusable="false" width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="social-icon" d="M12 4V0H8C5.79086 0 4 1.79086 4 4V8H0V12H4V22H8V12H12V8H8V4H12Z" fill="white"/>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a class="social-link" href="#">
+                  <span class="visually-hidden">Ютуб</span>
+                  <svg aria-hidden="true" focusable="false" width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="social-icon" fill-rule="evenodd" clip-rule="evenodd" d="M3 0H17C18.65 0 20 1.35 20 3V13C20 14.65 18.65 16 17 16H3C1.35 16 0 14.65 0 13V3C0 1.35 1.35 0 3 0ZM6.027 4.002V11.998L15.014 8L6.027 4.002Z" fill="white"/>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </section>
+          <p class="footer-copyright">
+            Website by
+            <a class="footer-copyright-link" href="https://htmlacademy.ru/intensive/htmlcss">
+              <span class="visually-hidden">HTML Academy</span>
             </a>
-          </li>
-          <li>
-            <a class="social-link" href="#">
-              <span class="visually-hidden">Фейсбук</span>
-              <svg  width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path class="social-icon" d="M12 4V0H8C5.79086 0 4 1.79086 4 4V8H0V12H4V22H8V12H12V8H8V4H12Z" fill="white"/>
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a class="social-link" href="#">
-              <span class="visually-hidden">Ютуб</span>
-              <svg  width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path class="social-icon" fill-rule="evenodd" clip-rule="evenodd" d="M3 0H17C18.65 0 20 1.35 20 3V13C20 14.65 18.65 16 17 16H3C1.35 16 0 14.65 0 13V3C0 1.35 1.35 0 3 0ZM6.027 4.002V11.998L15.014 8L6.027 4.002Z" fill="white"/>
-              </svg>
-            </a>
-          </li>
-        </ul>
-      </section>
-      <p class="footer-copyright">
-        Website by
-        <a class="footer-copyright-link" href="https://htmlacademy.ru/intensive/htmlcss">
-          <span class="visually-hidden">HTML Academy</span>
-        </a>
-      </p>
-    </footer>
-  </div>
-</body>
-</html>
+          </p>
+        </footer>
+      </div>
+    <script src="script.js"></script>
+    </body>
+    </html>
